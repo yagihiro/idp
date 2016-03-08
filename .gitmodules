@@ -1,0 +1,3 @@
+[submodule "vendor/rapid"]
+	path = vendor/rapid
+	url = https://github.com/yagihiro/rapid.git

@@ -7,8 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5668171C8DF3B900649FC6 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5668151C8DF3B900649FC6 /* libcrypto.dylib */; };
+		9B5668181C8DF3B900649FC6 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5668161C8DF3B900649FC6 /* libssl.dylib */; };
 		9B72E6DC1C8B525900029025 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B72E6DB1C8B525900029025 /* main.cpp */; };
+		9B72E6E81C8B55D800029025 /* librapid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B72E6E51C8B55B300029025 /* librapid.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B72E6E41C8B55B300029025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B72E6E01C8B55B200029025 /* rapid.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B5FB1D61B0CE8E50058ADB7;
+			remoteInfo = rapid;
+		};
+		9B72E6E61C8B55CC00029025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B72E6E01C8B55B200029025 /* rapid.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B5FB1D51B0CE8E50058ADB7;
+			remoteInfo = rapid;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9B72E6CD1C8B51A400029025 /* CopyFiles */ = {
@@ -23,12 +43,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B5668151C8DF3B900649FC6 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "/Users/hiroki-yagita/r/idp/vendor/rapid/projects/osx/../../../../../../../../usr/local/Cellar/openssl/1.0.2g/lib/libcrypto.dylib"; sourceTree = "<absolute>"; };
+		9B5668161C8DF3B900649FC6 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "/Users/hiroki-yagita/r/idp/vendor/rapid/projects/osx/../../../../../../../../usr/local/Cellar/openssl/1.0.2g/lib/libssl.dylib"; sourceTree = "<absolute>"; };
 		9B72E6CF1C8B51A400029025 /* idp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = idp; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B72E6D91C8B522C00029025 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = ../../include; sourceTree = "<group>"; };
 		9B72E6DB1C8B525900029025 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B72E6DD1C8B539900029025 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../../.gitignore; sourceTree = "<group>"; };
 		9B72E6DE1C8B539900029025 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		9B72E6DF1C8B539900029025 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		9B72E6E01C8B55B200029025 /* rapid.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = rapid.xcodeproj; path = ../../vendor/rapid/projects/osx/rapid.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B72E6E81C8B55D800029025 /* librapid.a in Frameworks */,
+				9B5668171C8DF3B900649FC6 /* libcrypto.dylib in Frameworks */,
+				9B5668181C8DF3B900649FC6 /* libssl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,12 +71,15 @@
 		9B72E6C61C8B51A400029025 = {
 			isa = PBXGroup;
 			children = (
+				9B5668151C8DF3B900649FC6 /* libcrypto.dylib */,
+				9B5668161C8DF3B900649FC6 /* libssl.dylib */,
 				9B72E6D91C8B522C00029025 /* include */,
 				9B72E6D01C8B51A400029025 /* Products */,
 				9B72E6DA1C8B525900029025 /* src */,
 				9B72E6DD1C8B539900029025 /* .gitignore */,
 				9B72E6DE1C8B539900029025 /* LICENSE */,
 				9B72E6DF1C8B539900029025 /* README.md */,
+				9B72E6E01C8B55B200029025 /* rapid.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +100,14 @@
 			path = ../../src;
 			sourceTree = "<group>";
 		};
+		9B72E6E11C8B55B200029025 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B72E6E51C8B55B300029025 /* librapid.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +122,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9B72E6E71C8B55CC00029025 /* PBXTargetDependency */,
 			);
 			name = idp;
 			productName = idp;
@@ -115,12 +153,28 @@
 			mainGroup = 9B72E6C61C8B51A400029025;
 			productRefGroup = 9B72E6D01C8B51A400029025 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9B72E6E11C8B55B200029025 /* Products */;
+					ProjectRef = 9B72E6E01C8B55B200029025 /* rapid.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9B72E6CE1C8B51A400029025 /* idp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9B72E6E51C8B55B300029025 /* librapid.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = librapid.a;
+			remoteRef = 9B72E6E41C8B55B300029025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B72E6CB1C8B51A400029025 /* Sources */ = {
@@ -132,6 +186,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B72E6E71C8B55CC00029025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = rapid;
+			targetProxy = 9B72E6E61C8B55CC00029025 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9B72E6D41C8B51A400029025 /* Debug */ = {
@@ -170,6 +232,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../include",
+					"$(SRCROOT)/../../vendor/rapid/include",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/openssl/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -207,6 +274,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../include",
+					"$(SRCROOT)/../../vendor/rapid/include",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/openssl/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;

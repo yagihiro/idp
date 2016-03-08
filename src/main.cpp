@@ -1,7 +1,28 @@
+#include <rapid/rapid.h>
+#include <signal.h>
 #include <iostream>
+#include <thread>
 
-int main(int argc, const char * argv[]) {
-  // insert code here...
-  std::cout << "Hello, World!\n";
-    return 0;
+static sig_atomic_t _received_sigint = 0;
+
+// Ctrl-C
+static void on_sigint(int sig) { _received_sigint = 1; }
+
+int main(int argc, const char* argv[]) {
+  if (signal(SIGINT, on_sigint) == SIG_ERR) {
+    return EXIT_FAILURE;
+  }
+
+  rapid::Server server;
+  server.set_port(8080);
+  server.use_tls();
+  server.set_tls_certificate_path("/usr/local/etc/openssl/misc/serverca.crt");
+  server.set_tls_private_key_path("/usr/local/etc/openssl/misc/server.key");
+  server.run();
+
+  do {
+    std::this_thread::sleep_for(std::chrono::milliseconds(32));
+  } while (_received_sigint == 0);
+
+  return EXIT_SUCCESS;
 }
