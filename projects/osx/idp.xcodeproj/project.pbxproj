@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B5668171C8DF3B900649FC6 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5668151C8DF3B900649FC6 /* libcrypto.dylib */; };
 		9B5668181C8DF3B900649FC6 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5668161C8DF3B900649FC6 /* libssl.dylib */; };
+		9B56681A1C909ECF00649FC6 /* libhiredis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5668191C909ECF00649FC6 /* libhiredis.dylib */; };
 		9B72E6DC1C8B525900029025 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B72E6DB1C8B525900029025 /* main.cpp */; };
 		9B72E6E81C8B55D800029025 /* librapid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B72E6E51C8B55B300029025 /* librapid.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		9B5668151C8DF3B900649FC6 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "/Users/hiroki-yagita/r/idp/vendor/rapid/projects/osx/../../../../../../../../usr/local/Cellar/openssl/1.0.2g/lib/libcrypto.dylib"; sourceTree = "<absolute>"; };
 		9B5668161C8DF3B900649FC6 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "/Users/hiroki-yagita/r/idp/vendor/rapid/projects/osx/../../../../../../../../usr/local/Cellar/openssl/1.0.2g/lib/libssl.dylib"; sourceTree = "<absolute>"; };
+		9B5668191C909ECF00649FC6 /* libhiredis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhiredis.dylib; path = ../../../../../../usr/local/lib/libhiredis.dylib; sourceTree = "<group>"; };
 		9B72E6CF1C8B51A400029025 /* idp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = idp; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B72E6D91C8B522C00029025 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = ../../include; sourceTree = "<group>"; };
 		9B72E6DB1C8B525900029025 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			files = (
 				9B72E6E81C8B55D800029025 /* librapid.a in Frameworks */,
 				9B5668171C8DF3B900649FC6 /* libcrypto.dylib in Frameworks */,
+				9B56681A1C909ECF00649FC6 /* libhiredis.dylib in Frameworks */,
 				9B5668181C8DF3B900649FC6 /* libssl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +74,7 @@
 		9B72E6C61C8B51A400029025 = {
 			isa = PBXGroup;
 			children = (
+				9B5668191C909ECF00649FC6 /* libhiredis.dylib */,
 				9B5668151C8DF3B900649FC6 /* libcrypto.dylib */,
 				9B5668161C8DF3B900649FC6 /* libssl.dylib */,
 				9B72E6D91C8B522C00029025 /* include */,
@@ -233,10 +237,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
 					"$(SRCROOT)/../../include",
 					"$(SRCROOT)/../../vendor/rapid/include",
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/opt/openssl/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/opt/openssl/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,10 +283,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
 					"$(SRCROOT)/../../include",
 					"$(SRCROOT)/../../vendor/rapid/include",
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/opt/openssl/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/opt/openssl/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
