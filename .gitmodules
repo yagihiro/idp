@@ -1,3 +1,6 @@
 [submodule "vendor/rapid"]
 	path = vendor/rapid
 	url = https://github.com/yagihiro/rapid.git
+[submodule "vendor/hiredis"]
+	path = vendor/hiredis
+	url = https://github.com/redis/hiredis.git
