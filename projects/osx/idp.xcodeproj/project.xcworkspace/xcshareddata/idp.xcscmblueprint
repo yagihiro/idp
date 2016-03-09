@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9C2E73B5A54D5328CFFBC949036B32DBFCF209DF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C9A2B53EAE5271CED170EC3FE79BD3721CDF1E43" : 0,
+    "9C2E73B5A54D5328CFFBC949036B32DBFCF209DF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E3ED74AC-85B3-43C3-A058-3D6BE327845C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C9A2B53EAE5271CED170EC3FE79BD3721CDF1E43" : "idp\/vendor\/rapid\/",
+    "9C2E73B5A54D5328CFFBC949036B32DBFCF209DF" : "idp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "idp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "projects\/osx\/idp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yagihiro\/idp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9C2E73B5A54D5328CFFBC949036B32DBFCF209DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yagihiro\/rapid.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C9A2B53EAE5271CED170EC3FE79BD3721CDF1E43"
+    }
+  ]
+}
